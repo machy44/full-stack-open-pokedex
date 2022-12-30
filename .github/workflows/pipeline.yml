@@ -19,7 +19,7 @@ jobs:
       - uses: actions/setup-node@v3
         # with keyword is used to give a "parameter" to the action
         with:
-          node-version: '14'
+          node-version: '18'
       - name: npm install
         run: npm install
       - name: lint
