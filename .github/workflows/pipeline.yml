@@ -1,6 +1,6 @@
 name: Deployment pipeline
 
-on: 
+on:
   push:
     branches:
       - master
@@ -8,18 +8,18 @@ on:
 jobs:
   simple_deployment_pipeline:
     runs-on: ubuntu-20.04
-    steps: 
-    # which action to use
-    # Actions can be defined in your repository in a separate file or you can use the ones available in public repositories
-    # https://github.com/actions/checkout
+    steps:
+      # which action to use
+      # Actions can be defined in your repository in a separate file or you can use the ones available in public repositories
+      # https://github.com/actions/checkout
       - uses: actions/checkout@v3
-    # Secondly, as the application is written in JavaScript,
-    # Node.js must be set up to be able to utilize the commands that are specified in package.json. To set up Node.js, actions/setup-node action can be used
-    # https://github.com/actions/setup-node
+      # Secondly, as the application is written in JavaScript,
+      # Node.js must be set up to be able to utilize the commands that are specified in package.json. To set up Node.js, actions/setup-node action can be used
+      # https://github.com/actions/setup-node
       - uses: actions/setup-node@v3
-      # with keyword is used to give a "parameter" to the action
-        with: 
-          node-version: "14"
+        # with keyword is used to give a "parameter" to the action
+        with:
+          node-version: '14'
       - name: npm install
         run: npm install
       - name: lint
