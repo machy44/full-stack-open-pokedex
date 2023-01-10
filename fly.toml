@@ -1,9 +1,10 @@
 # fly.toml file generated for alen-pokedex on 2023-01-09T18:11:12+01:00
 
-app = "alen-pokedex"
+# hostname
+app = "alen-pokedex" 
 kill_signal = "SIGINT"
 kill_timeout = 5
-processes = []
+# processes = []
 
 [env]
   PORT = "8080"
@@ -11,6 +12,12 @@ processes = []
 [experimental]
   allowed_public_ports = []
   auto_rollback = true
+
+[deploy]
+  release_command = "npm run build"
+
+[processes]
+  app = "node app.js"
 
 [[services]]
   http_checks = []

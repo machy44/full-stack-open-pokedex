@@ -1,2 +1,4 @@
 - [+] create acc and app on fly.io
-- [ ] deploy to fly.io
+- [+] deploy to fly.io manuallly
+- [ ] deploy from github action
+- resolve other  11.*
