@@ -23,6 +23,7 @@ jobs:
         # with keyword is used to give a "parameter" to the action
         with:
           node-version: '18'
+      - uses: superfly/flyctl-actions/setup-flyctl@master
       - name: npm install
         run: npm install
       - name: lint
@@ -38,5 +39,4 @@ jobs:
           start: npm run start-prod
           wait-on: http://localhost:5000
       - name: fly.io deploy
-        uses: superfly/flyctl-actions/setup-flyctl@master
         run: flyctl deploy --remote-only
