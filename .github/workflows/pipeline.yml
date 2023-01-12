@@ -26,7 +26,7 @@ jobs:
       - uses: superfly/flyctl-actions/setup-flyctl@master
 
       - name: npm install
-        run: npm install
+        run: npm install --production=false
       - name: lint
         run: npm run eslint
       - name: build
