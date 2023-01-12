@@ -13,11 +13,11 @@ kill_timeout = 5
   allowed_public_ports = []
   auto_rollback = true
 
-[deploy]
-  release_command = "npm run build"
+# [deploy]
+#   release_command = "npm run build"
 
-[processes]
-  app = "node app.js"
+# [processes]
+#   app = "node app.js"
 
 [[services]]
   http_checks = []
