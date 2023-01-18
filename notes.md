@@ -25,3 +25,7 @@ Let's define some things we want in this hypothetical deployment system too:
 
 - We would like it to be fast
 - We'd like to have no downtime during the deployment (this is distinct from the requirement we have for handling user requests just before/during the deployment).
+
+## fly.io
+
+A particularly important command is `fly logs`. This command can be used to view server logs. It is best to keep logs always visible!

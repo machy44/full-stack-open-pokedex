@@ -9,10 +9,10 @@
     "test": "jest",
     "eslint": "eslint './**/*.{js,jsx}'",
     "build": "webpack --mode production",
-    "build:start:prod": "npm run build && npm run start-prod",
     "deploy:full": "npm run build && fly deploy",
     "test:e2e": "cypress run",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "logs:prod": "fly logs"
   },
   "repository": {
     "type": "git",

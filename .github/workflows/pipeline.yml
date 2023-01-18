@@ -5,9 +5,6 @@ on:
     branches:
       - master
 
-env:
-  FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
-
 jobs:
   simple_deployment_pipeline:
     runs-on: ubuntu-20.04
@@ -24,7 +21,7 @@ jobs:
         with:
           node-version: '18'
       - uses: superfly/flyctl-actions/setup-flyctl@master
-
+      # npm ci
       - name: npm install
         run: npm install
       - name: lint
@@ -40,4 +37,8 @@ jobs:
           start: npm run start-prod
           wait-on: http://localhost:8080
       - name: fly.io deploy
-        run: flyctl deploy --remote-only
+        uses: superfly/flyctl-actions/setup-flyctl@master
+        with:
+          args: flyctl deploy --remote-only
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}

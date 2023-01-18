@@ -21,6 +21,7 @@ ENV NODE_ENV production
 
 COPY . .
 
+# shell form
 RUN npm install --production=false
 FROM debian:bullseye
 
@@ -33,4 +34,5 @@ WORKDIR /app
 ENV NODE_ENV production
 ENV PATH /root/.volta/bin:$PATH
 
+# exec form. doesnt start the shell session
 CMD [ "npm", "run", "start-prod" ]
