@@ -12,7 +12,8 @@
     "deploy:full": "npm run build && fly deploy",
     "test:e2e": "cypress run",
     "cypress:open": "cypress open",
-    "logs:prod": "fly logs"
+    "logs:prod": "fly logs",
+    "releases:prod": "flyctl releases"
   },
   "repository": {
     "type": "git",
