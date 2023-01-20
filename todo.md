@@ -2,6 +2,6 @@
 - [+] deploy to fly.io manuallly
 - [+] deploy from github action
 - [+] napisi da sam ipak morao dodati production=false
-- [ ] 11.11. health check and rollback
+- [+] 11.11. health check and rollback
 - [ ] 11.11. check version of the app
 - [ ] 11.12. Custom health check through shell script

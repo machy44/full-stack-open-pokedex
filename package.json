@@ -13,7 +13,7 @@
     "test:e2e": "cypress run",
     "cypress:open": "cypress open",
     "logs:prod": "fly logs",
-    "releases:prod": "flyctl releases"
+    "releases": "flyctl releases"
   },
   "repository": {
     "type": "git",
@@ -46,16 +46,17 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.11",
     "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.0",
     "jest": "^25.5.4",
     "prettier": "^2.8.1",
     "style-loader": "^3.3.1",
-    "webpack-dev-server": "^4.11.1",
-    "html-webpack-plugin": "^5.5.0",
+    "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1",
-    "webpack": "^5.75.0"
+    "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
