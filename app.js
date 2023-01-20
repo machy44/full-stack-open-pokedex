@@ -16,6 +16,7 @@ app.get('/health', (req, res) => {
 });
 
 app.get('/version', (req, res) => {
+  // https://community.fly.io/t/supply-build-version-via-env-variable/1667/5
   axios
     .post(
       'https://api.fly.io/graphql',
